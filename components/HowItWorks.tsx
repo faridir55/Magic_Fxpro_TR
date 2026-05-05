@@ -1,0 +1,74 @@
+"use client";
+
+import { motion } from "framer-motion";
+
+export default function HowItWorks() {
+  const steps = [
+    {
+      number: "01",
+      title: "Register",
+      description: "Open your GTC trading account.",
+      link: "https://my.gtcglobal.com/register",
+      linkText: "Register here"
+    },
+    {
+      number: "02",
+      title: "Fund",
+      description: "Deposit the required minimum capital.",
+    },
+    {
+      number: "03",
+      title: "Subscribe",
+      description: "Connect to the GTC Gold strategy.",
+      link: "https://ratings.gtccopy.com/widgets/ratings/5588?widgetKey=social_platform_ratings",
+      linkText: "Connect here"
+    },
+  ];
+
+  return (
+    <section id="how-it-works" className="py-32 px-4 max-w-7xl mx-auto">
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.8 }}
+        className="text-center mb-20"
+      >
+        <h2 className="font-serif text-4xl md:text-5xl text-accent-gradient inline-block pb-4 border-b border-glass-border">
+          How It Works
+        </h2>
+      </motion.div>
+
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+        {steps.map((step, index) => (
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8, delay: index * 0.2 }}
+            className="glass-panel p-12 relative group hover:-translate-y-2 transition-transform duration-500 hover:border-accent-color"
+          >
+            <div className="font-serif text-7xl text-accent-color/10 absolute top-6 right-8 font-bold leading-none group-hover:text-accent-color/20 transition-colors duration-500">
+              {step.number}
+            </div>
+            <h3 className="font-serif text-2xl mb-4 relative z-10">{step.title}</h3>
+            <p className="text-text-muted relative z-10">
+              {step.description}
+            </p>
+            {step.link && (
+              <a
+                href={step.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block mt-6 text-accent-color hover:text-white transition-colors text-sm uppercase tracking-wider font-medium"
+              >
+                {step.linkText} →
+              </a>
+            )}
+          </motion.div>
+        ))}
+      </div>
+    </section>
+  );
+}

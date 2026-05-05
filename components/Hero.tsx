@@ -1,0 +1,63 @@
+"use client";
+
+import { motion } from "framer-motion";
+
+export default function Hero() {
+  return (
+    <section className="relative min-h-screen flex flex-col justify-center items-center text-center px-4 overflow-hidden">
+      {/* Background with overlay */}
+      <div
+        className="absolute inset-0 z-0 bg-cover bg-center"
+        style={{ backgroundImage: "url('/hero-bg.jpg')" }}
+      >
+        <div className="absolute inset-0 bg-bg-color/60 bg-blend-multiply"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-bg-color"></div>
+      </div>
+
+      <div className="relative z-10 max-w-4xl mx-auto">
+        <motion.h1
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+          className="font-serif text-5xl md:text-7xl lg:text-8xl mb-6 text-accent-gradient tracking-tight"
+        >
+          Master the Element of Wealth
+        </motion.h1>
+
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
+          className="text-lg md:text-xl text-text-muted mb-12 max-w-2xl mx-auto"
+        >
+          Elite algorithmic copy trading specializing exclusively in Gold
+          (XAU/USD).
+        </motion.p>
+
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
+          className="flex flex-col sm:flex-row gap-6 justify-center"
+        >
+          <a
+            href="https://my.gtcglobal.com/register"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="border border-accent-color bg-accent-color text-bg-color px-8 py-4 font-medium uppercase tracking-widest text-sm hover:bg-transparent hover:text-accent-color transition-colors"
+          >
+            Open Account
+          </a>
+          <a
+            href="https://ratings.gtccopy.com/widgets/ratings/5588?widgetKey=social_platform_ratings"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="border border-accent-color text-accent-color px-8 py-4 font-medium uppercase tracking-widest text-sm hover:bg-accent-color hover:text-bg-color transition-colors"
+          >
+            Live Performance
+          </a>
+        </motion.div>
+      </div>
+    </section>
+  );
+}
