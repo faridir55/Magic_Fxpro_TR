@@ -93,25 +93,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // Fetch on load
     fetchPerformanceMetrics();
 
-    // Smooth Scrolling for anchor links
-    document.querySelectorAll('a.smooth-scroll').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            const targetId = this.getAttribute('href');
-            if (targetId.startsWith('#')) {
-                e.preventDefault();
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    const navHeight = document.querySelector('.navbar').offsetHeight;
-                    const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navHeight;
-                    
-                    window.scrollTo({
-                        top: targetPosition,
-                        behavior: 'smooth'
-                    });
-                }
-            }
-        });
-    });
 
     // Form Submission Handling
     const contactForm = document.getElementById('contact-form');
