@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Footer() {
   return (
     <footer className="border-t border-glass-border pt-20 pb-10 px-4 text-center relative overflow-hidden">
@@ -7,15 +9,15 @@ export default function Footer() {
         </div>
         
         <p className="text-xl text-text-muted mb-12 max-w-2xl mx-auto font-serif italic">
-          "The Element of Wealth, Mastered."
+          &quot;The Element of Wealth, Mastered.&quot;
         </p>
 
         <div className="flex flex-wrap justify-center gap-8 mb-16 uppercase text-sm tracking-widest font-medium">
-          <a href="/" className="text-text-muted hover:text-accent-color transition-colors">Home</a>
+          <Link href="/" className="text-text-muted hover:text-accent-color transition-colors">Home</Link>
           <a href="#strategy" className="text-text-muted hover:text-accent-color transition-colors">Strategy</a>
           <a href="#performance" className="text-text-muted hover:text-accent-color transition-colors">Performance</a>
-          <a href="/tutorials" className="text-text-muted hover:text-accent-color transition-colors">Tutorials</a>
-          <a href="/blog" className="text-text-muted hover:text-accent-color transition-colors">Blog</a>
+          <Link href="/tutorials" className="text-text-muted hover:text-accent-color transition-colors">Tutorials</Link>
+          <Link href="/blog" className="text-text-muted hover:text-accent-color transition-colors">Blog</Link>
         </div>
 
         <div className="border-t border-white/5 pt-10 mt-10">
