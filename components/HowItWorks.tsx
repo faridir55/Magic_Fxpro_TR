@@ -18,13 +18,7 @@ export default function HowItWorks() {
       link: "https://mygtcfx.com/getview?view=fund/deposit",
       linkText: "Fund here"
     },
-    {
-      number: "02",
-      title: "Test",
-      description: "this is a test.",
-      link: "https://mygtcfx.com/getview?view=fund/deposit",
-      linkText: "Fund here"
-    },
+
     {
       number: "03",
       title: "Subscribe",
