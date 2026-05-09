@@ -2,21 +2,51 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Link from "next/link";
 
-export default function Blog() {
-  const posts = [
-    {
-      id: "first-post",
-      title: "Why Algorithmic Gold Trading Outperforms Manual Day Trading",
-      date: "May 5, 2026",
-      excerpt: "Explore the quantitative advantages of utilizing algorithmic systems in highly liquid markets like XAU/USD, eliminating emotional bias.",
-    },
-    {
-      id: "risk-management",
-      title: "The Core Pillar: Institutional Risk Management",
-      date: "April 28, 2026",
-      excerpt: "How our strict maximum drawdown parameters protect your capital during unforeseen macroeconomic news events.",
+import fs from "fs";
+import path from "path";
+
+type Post = {
+  id: string;
+  title: string;
+  date: string;
+  excerpt: string;
+};
+
+function getBlogPosts(): Post[] {
+  const blogDir = path.join(process.cwd(), "app", "blog");
+  const entries = fs.readdirSync(blogDir, { withFileTypes: true });
+  
+  const posts: Post[] = [];
+
+  for (const entry of entries) {
+    if (entry.isDirectory()) {
+      const mdxPath = path.join(blogDir, entry.name, "page.mdx");
+      if (fs.existsSync(mdxPath)) {
+        const fileContent = fs.readFileSync(mdxPath, "utf8");
+        
+        // Regex to extract the metadata fields
+        const titleMatch = fileContent.match(/title:\s*["'](.*?)["']/);
+        const dateMatch = fileContent.match(/date:\s*["'](.*?)["']/);
+        const excerptMatch = fileContent.match(/excerpt:\s*["'](.*?)["']/);
+        
+        if (titleMatch && dateMatch && excerptMatch) {
+          posts.push({
+            id: entry.name,
+            title: titleMatch[1],
+            date: dateMatch[1],
+            excerpt: excerptMatch[1],
+          });
+        }
+      }
     }
-  ];
+  }
+
+  // Sort posts by date (newest first)
+  return posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+}
+
+export default function Blog() {
+  const posts = getBlogPosts();
 
   return (
     <>
