@@ -8,19 +8,21 @@ export default function HowItWorks() {
       number: "01",
       title: "Register",
       description: "Open your GTC trading account.",
-      link: "https://my.gtcglobal.com/register",
+      link: "https://mygtcportal.com/getview?view=register&token=Ai9beowwqowwwwww",
       linkText: "Register here"
     },
     {
       number: "02",
       title: "Fund",
       description: "Deposit the required minimum capital.",
+      link: "https://mygtcfx.com/getview?view=fund/deposit",
+      linkText: "Fund here"
     },
     {
       number: "03",
       title: "Subscribe",
       description: "Connect to the GTC Gold strategy.",
-      link: "https://ratings.gtccopy.com/widgets/ratings/5588?widgetKey=social_platform_ratings",
+      link: "https://gtccopy.com/portal/registration/subscription/86494/magicfx",
       linkText: "Connect here"
     },
   ];
