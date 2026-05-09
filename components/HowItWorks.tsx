@@ -32,7 +32,7 @@ export default function HowItWorks() {
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-100px" }}
+        viewport={{ once: true, amount: 0.1 }}
         transition={{ duration: 0.8 }}
         className="text-center mb-20"
       >
@@ -46,8 +46,7 @@ export default function HowItWorks() {
           <motion.div
             key={index}
             initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: index * 0.2 }}
             className="glass-panel p-12 relative group hover:-translate-y-2 transition-transform duration-500 hover:border-accent-color"
           >
