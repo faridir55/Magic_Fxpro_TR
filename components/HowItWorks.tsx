@@ -63,9 +63,9 @@ export default function HowItWorks() {
                 href={step.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block mt-6 text-accent-color hover:text-white transition-colors text-sm uppercase tracking-wider font-medium"
+                className="inline-block mt-6 border border-accent-color text-accent-color px-6 py-2 font-medium uppercase tracking-widest text-xs hover:bg-accent-color hover:text-bg-color transition-colors"
               >
-                {step.linkText} →
+                {step.linkText}
               </a>
             )}
           </motion.div>
