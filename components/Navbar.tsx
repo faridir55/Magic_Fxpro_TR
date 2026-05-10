@@ -18,7 +18,7 @@ export default function Navbar() {
 
   const navLinks = [
     { name: "Home", href: "/" },
-    { name: "Strategy", href: "#strategy" },
+    { name: "How it works", href: "#how-it-works" },
     { name: "Performance", href: "#performance" },
     { name: "Tutorials", href: "/tutorials" },
     { name: "Blog", href: "/blog" },
@@ -26,11 +26,10 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        isScrolled
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled
           ? "bg-bg-color/90 backdrop-blur-md border-b border-glass-border py-4"
           : "bg-transparent py-6"
-      }`}
+        }`}
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8 flex justify-between items-center">
         {/* Logo */}
@@ -67,9 +66,8 @@ export default function Navbar() {
 
         {/* Mobile Nav */}
         <div
-          className={`fixed inset-0 bg-bg-color flex flex-col items-center justify-center space-y-8 transition-transform duration-500 ease-in-out z-40 ${
-            isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
-          }`}
+          className={`fixed inset-0 bg-bg-color flex flex-col items-center justify-center space-y-8 transition-transform duration-500 ease-in-out z-40 ${isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
+            }`}
         >
           {navLinks.map((link) => (
             <Link
