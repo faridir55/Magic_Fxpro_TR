@@ -27,17 +27,17 @@ export default function Navbar() {
   return (
     <nav
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled
-          ? "bg-bg-color/90 backdrop-blur-md border-b border-glass-border py-4"
-          : "bg-transparent py-6"
+        ? "bg-bg-color/90 backdrop-blur-md border-b border-glass-border py-4"
+        : "bg-transparent py-6"
         }`}
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8 flex justify-between items-center">
         {/* Logo */}
         <Link href="/" className="z-50 flex items-center">
-          <img 
-            src="/MagicFX_pro.png" 
-            alt="MagicFX Pro Logo" 
-            className="h-10 w-auto object-contain"
+          <img
+            src="/MagicFX_pro.png"
+            alt="MagicFX Pro Logo"
+            className="h-auto w-auto object-contain"
           />
         </Link>
 
