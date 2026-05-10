@@ -40,22 +40,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
           className="flex flex-col sm:flex-row gap-6 justify-center"
         >
-          <a
-            href="https://my.gtcglobal.com/register"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="border border-accent-color bg-accent-color text-bg-color px-8 py-4 font-medium uppercase tracking-widest text-sm hover:bg-transparent hover:text-accent-color transition-colors"
-          >
-            Open Account
-          </a>
-          <a
-            href="https://ratings.gtccopy.com/widgets/ratings/5588?widgetKey=social_platform_ratings"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="border border-accent-color text-accent-color px-8 py-4 font-medium uppercase tracking-widest text-sm hover:bg-accent-color hover:text-bg-color transition-colors"
-          >
-            Live Performance
-          </a>
+
         </motion.div>
       </div>
     </section>
