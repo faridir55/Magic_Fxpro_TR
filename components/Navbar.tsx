@@ -37,7 +37,7 @@ export default function Navbar() {
           <img
             src="/MagicFX_pro.png"
             alt="MagicFX Pro Logo"
-            className="h-15 w-auto object-contain"
+            className="h-20 w-auto object-contain"
           />
         </Link>
 
