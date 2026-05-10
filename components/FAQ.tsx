@@ -9,20 +9,24 @@ export default function FAQ() {
 
   const faqs = [
     {
-      question: "What is the minimum investment required?",
-      answer: "The minimum required capital to copy the GTC Gold strategy is typically determined by the platform parameters to ensure safe lot sizing. Please check the strategy profile for the current minimums.",
+      question: "What is the minimum amount to start copying?",
+      answer: "The minimum capital required is $100. This ensures safe lot sizing and proper risk management on your account.",
     },
     {
-      question: "Do I need to leave my computer on?",
-      answer: "No. The trades are copied entirely on the server side through the GTC platform. Your account will mirror the strategy 24/5 automatically.",
+      question: "Do I need any trading experience?",
+      answer: "No experience is needed. Once you subscribe, the algorithm trades automatically on your behalf — you don't need to monitor charts or place any orders manually.",
+    },
+    {
+      question: "Do I need to keep my computer on?",
+      answer: "No. The strategy runs on our servers 24/5. Your computer can be completely off and trades will still execute normally.",
     },
     {
       question: "Can I withdraw my funds at any time?",
-      answer: "Yes, you retain full control over your funds. You can pause the copying or withdraw your capital at any time without lock-in periods.",
+      answer: "Yes. Your funds are held in your own GTC brokerage account and are never locked. You can withdraw at any time without penalties.",
     },
     {
       question: "How does the performance fee work?",
-      answer: "A performance fee is only charged on new profits generated above the high-water mark. If there is no profit, there is no fee.",
+      answer: "A performance fee is only charged on profits. If the strategy does not generate returns, you pay nothing. Full fee details are available on the strategy profile page.",
     },
   ];
 

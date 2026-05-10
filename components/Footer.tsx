@@ -21,7 +21,7 @@ export default function Footer() {
             <strong className="text-text-muted">RISK DISCLOSURE:</strong> Trading foreign exchange and precious metals on margin carries a high level of risk and may not be suitable for all investors. The high degree of leverage can work against you as well as for you. Past performance is not indicative of future results. Before deciding to invest in foreign exchange or copy trading, you should carefully consider your investment objectives, level of experience, and risk appetite.
           </p>
           <p className="text-xs text-text-muted/40">
-            &copy; {new Date().getFullYear()} GTC Gold. All rights reserved.
+            &copy; {new Date().getFullYear()} Magic FX Pro. All rights reserved.
           </p>
         </div>
       </div>

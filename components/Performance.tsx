@@ -10,19 +10,27 @@ export default function Performance() {
     maxDrawdown: "13.02",
     monthReturn: "14.46",
     loading: true,
+    error: false,
   });
 
   useEffect(() => {
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 8000);
+
     async function fetchMetrics() {
       try {
         const [profileRes, indicatorsRes] = await Promise.all([
           fetch(
-            "https://ratings.gtccopy.com/api/rating/1/profile/5588?widget_key=social_platform_ratings"
+            "https://ratings.gtccopy.com/api/rating/1/profile/5588?widget_key=social_platform_ratings",
+            { signal: controller.signal }
           ),
           fetch(
-            "https://ratings.gtccopy.com/api/reports/5322/indicators?widget_key=social_platform_ratings"
+            "https://ratings.gtccopy.com/api/reports/5322/indicators?widget_key=social_platform_ratings",
+            { signal: controller.signal }
           ),
         ]);
+
+        clearTimeout(timeoutId);
 
         if (!profileRes.ok || !indicatorsRes.ok) throw new Error("API failed");
 
@@ -35,14 +43,20 @@ export default function Performance() {
           maxDrawdown: parseFloat(indicatorsData.maxDrawdown).toFixed(2),
           monthReturn: parseFloat(profileData.returnMonth).toFixed(2),
           loading: false,
+          error: false,
         });
       } catch (error) {
         console.error("Failed to fetch performance metrics", error);
-        setMetrics((prev) => ({ ...prev, loading: false }));
+        setMetrics((prev) => ({ ...prev, loading: false, error: true }));
       }
     }
 
     fetchMetrics();
+    
+    return () => {
+      clearTimeout(timeoutId);
+      controller.abort();
+    };
   }, []);
 
   const totalReturnFloat = parseFloat(metrics.totalReturn);
@@ -75,11 +89,26 @@ export default function Performance() {
             <h4 className="text-sm uppercase tracking-widest text-text-muted mb-4">
               Total Return
             </h4>
-            <div className="flex items-baseline gap-2 text-green-500">
-              <span className="font-serif text-6xl md:text-7xl font-bold">
-                {metrics.loading ? "..." : metrics.totalReturn}
-              </span>
-              <span className="text-2xl">%</span>
+            <div className={`flex items-baseline gap-2 ${metrics.error ? '' : 'text-green-500'}`}>
+              {metrics.loading ? (
+                <div className="animate-pulse bg-white/10 rounded h-16 w-32 mt-2"></div>
+              ) : metrics.error ? (
+                <a 
+                  href="https://ratings.gtccopy.com/widgets/ratings/5588?widgetKey=social_platform_ratings"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-lg text-accent-color hover:text-white transition-colors underline underline-offset-4 mt-4"
+                >
+                  View live stats →
+                </a>
+              ) : (
+                <>
+                  <span className="font-serif text-6xl md:text-7xl font-bold">
+                    {metrics.totalReturn}
+                  </span>
+                  <span className="text-2xl">%</span>
+                </>
+              )}
             </div>
 
             {/* Progress Bar */}
@@ -106,11 +135,26 @@ export default function Performance() {
               <h4 className="text-xs uppercase tracking-widest text-text-muted mb-4">
                 {metric.label}
               </h4>
-              <div className={`flex items-baseline gap-1 ${metric.color}`}>
-                <span className="font-serif text-4xl font-bold">
-                  {metrics.loading ? "..." : metric.value}
-                </span>
-                <span className="text-lg">%</span>
+              <div className={`flex items-baseline gap-1 ${metrics.error ? '' : metric.color}`}>
+                {metrics.loading ? (
+                  <div className="animate-pulse bg-white/10 rounded h-10 w-24 mt-1"></div>
+                ) : metrics.error ? (
+                  <a 
+                    href="https://ratings.gtccopy.com/widgets/ratings/5588?widgetKey=social_platform_ratings"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm text-accent-color hover:text-white transition-colors underline underline-offset-4 mt-2"
+                  >
+                    View live stats →
+                  </a>
+                ) : (
+                  <>
+                    <span className="font-serif text-4xl font-bold">
+                      {metric.value}
+                    </span>
+                    <span className="text-lg">%</span>
+                  </>
+                )}
               </div>
             </div>
           ))}
