@@ -11,18 +11,10 @@ export default function Footer() {
             className="h-24 w-auto object-contain"
           />
         </Link>
-        
+
         <p className="text-xl text-text-muted mb-12 max-w-2xl mx-auto font-serif italic">
           &quot;The Element of Wealth, Mastered.&quot;
         </p>
-
-        <div className="flex flex-wrap justify-center gap-8 mb-16 uppercase text-sm tracking-widest font-medium">
-          <Link href="/" className="text-text-muted hover:text-accent-color transition-colors">Home</Link>
-          <a href="#strategy" className="text-text-muted hover:text-accent-color transition-colors">Strategy</a>
-          <a href="#performance" className="text-text-muted hover:text-accent-color transition-colors">Performance</a>
-          <Link href="/tutorials" className="text-text-muted hover:text-accent-color transition-colors">Tutorials</Link>
-          <Link href="/blog" className="text-text-muted hover:text-accent-color transition-colors">Blog</Link>
-        </div>
 
         <div className="border-t border-white/5 pt-10 mt-10">
           <p className="text-xs text-text-muted/60 leading-relaxed max-w-3xl mx-auto mb-6">
@@ -33,7 +25,7 @@ export default function Footer() {
           </p>
         </div>
       </div>
-      
+
       {/* Background glow */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-3xl h-32 bg-accent-color/5 blur-3xl rounded-[100%]" />
     </footer>
