@@ -6,23 +6,23 @@ export default function HowItWorks() {
   const steps = [
     {
       number: "01",
-      title: "Register",
-      description: "Open your GTC trading account.",
+      title: "Create Broker Account",
+      description: "Register with our exclusive partner broker to ensure seamless trade execution and low latency.",
       link: "https://mygtcportal.com/getview?view=register&token=Ai9beowwqowwwwww",
       linkText: "Register"
     },
     {
       number: "02",
-      title: "Fund",
-      description: "Deposit the required minimum capital.",
+      title: "Fund Wallet",
+      description: "Minimum required capital is $100 to maintain adequate margin for our risk management",
       link: "https://mygtcfx.com/getview?view=fund/deposit",
       linkText: "Fund"
     },
 
     {
       number: "03",
-      title: "Subscribe",
-      description: "Connect to the GTC Gold strategy.",
+      title: "Connect to Master Account",
+      description: "Link your account to our master algorithm via the copy portal and mirror trades automatically.",
       link: "https://gtccopy.com/portal/registration/subscription/86494/magicfx",
       linkText: "Connect"
     },
