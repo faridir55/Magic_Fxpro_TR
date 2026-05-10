@@ -4,9 +4,13 @@ export default function Footer() {
   return (
     <footer className="border-t border-glass-border pt-20 pb-10 px-4 text-center relative overflow-hidden">
       <div className="max-w-4xl mx-auto relative z-10">
-        <div className="font-serif text-3xl font-bold tracking-widest text-text-color mb-8">
-          GTC<span className="text-accent-color">GOLD</span>
-        </div>
+        <Link href="/" className="flex justify-center mb-8">
+          <img
+            src="/MagicFX_pro.png"
+            alt="MagicFX Pro Logo"
+            className="h-24 w-auto object-contain"
+          />
+        </Link>
         
         <p className="text-xl text-text-muted mb-12 max-w-2xl mx-auto font-serif italic">
           &quot;The Element of Wealth, Mastered.&quot;
