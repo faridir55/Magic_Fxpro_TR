@@ -20,7 +20,7 @@ export default function Footer() {
         <div className="flex flex-col items-center justify-center mb-10">
           <h4 className="text-sm uppercase tracking-widest text-text-muted mb-4">Contact Us</h4>
           <a
-            href="https://wa.me/+1 (501) 914-4353"
+            href="https://wa.me/+15019144353"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3 border border-accent-color/30 rounded-full text-accent-color hover:bg-accent-color hover:text-bg-color transition-all duration-300"
