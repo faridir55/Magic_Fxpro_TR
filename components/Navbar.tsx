@@ -33,8 +33,12 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8 flex justify-between items-center">
         {/* Logo */}
-        <Link href="/" className="font-serif text-2xl font-bold tracking-widest text-text-color z-50">
-          GTC<span className="text-accent-color">GOLD</span>
+        <Link href="/" className="z-50 flex items-center">
+          <img 
+            src="/MagicFX_pro.png" 
+            alt="MagicFX Pro Logo" 
+            className="h-10 w-auto object-contain"
+          />
         </Link>
 
         {/* Desktop Nav */}
