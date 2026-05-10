@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { MessageCircle } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -12,9 +13,22 @@ export default function Footer() {
           />
         </Link>
 
-        <p className="text-xl text-text-muted mb-12 max-w-2xl mx-auto font-serif italic">
+        <p className="text-xl text-text-muted mb-8 max-w-2xl mx-auto font-serif italic">
           &quot;The Element of Wealth, Mastered.&quot;
         </p>
+
+        <div className="flex flex-col items-center justify-center mb-10">
+          <h4 className="text-sm uppercase tracking-widest text-text-muted mb-4">Contact Us</h4>
+          <a
+            href="https://wa.me/YOUR_NUMBER_HERE"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-6 py-3 border border-accent-color/30 rounded-full text-accent-color hover:bg-accent-color hover:text-bg-color transition-all duration-300"
+          >
+            <MessageCircle size={20} />
+            <span className="font-medium">WhatsApp Us</span>
+          </a>
+        </div>
 
         <div className="border-t border-white/5 pt-10 mt-10">
           <p className="text-xs text-text-muted/60 leading-relaxed max-w-3xl mx-auto mb-6">
