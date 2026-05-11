@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Montserrat, Playfair_Display } from "next/font/google";
 import "./globals.css";
-
+import ScrollToHash from "@/components/ScrollToHash";
 const montserrat = Montserrat({
   variable: "--font-montserrat",
   subsets: ["latin"],
@@ -41,9 +41,10 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${montserrat.variable} ${playfair.variable} h-full antialiased scroll-smooth`}
+      className={`${montserrat.variable} ${playfair.variable} h-full antialiased scroll-smooth scroll-pt-32`}
     >
       <body className="min-h-full flex flex-col bg-bg-color text-text-color font-sans overflow-x-hidden selection:bg-accent-color selection:text-bg-color">
+        <ScrollToHash />
         {children}
       </body>
     </html>
