@@ -17,8 +17,8 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { name: "How it works", href: "#how-it-works" },
-    { name: "Performance", href: "#performance" },
+    { name: "How it works", href: "/#how-it-works" },
+    { name: "Performance", href: "/#performance" },
     { name: "Tutorials", href: "/tutorials" },
     { name: "Blog", href: "/blog" },
   ];
@@ -52,7 +52,7 @@ export default function Navbar() {
             </Link>
           ))}
           <Link
-            href="#register"
+            href="/#register"
             className="border border-accent-color text-accent-color px-6 py-2 uppercase tracking-widest text-sm hover:bg-accent-color hover:text-bg-color transition-colors"
           >
             Start Copying
@@ -83,7 +83,7 @@ export default function Navbar() {
             </Link>
           ))}
           <Link
-            href="#register"
+            href="/#register"
             onClick={() => setIsMobileMenuOpen(false)}
             className="border border-accent-color text-accent-color px-8 py-3 uppercase tracking-widest text-lg hover:bg-accent-color hover:text-bg-color transition-colors mt-4"
           >
