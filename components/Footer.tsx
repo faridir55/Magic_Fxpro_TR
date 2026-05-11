@@ -23,7 +23,7 @@ export default function Footer() {
             href="https://wa.me/+15019144353"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 border border-accent-color/30 rounded-full text-accent-color hover:bg-accent-color hover:text-bg-color transition-all duration-300"
+            className="inline-flex items-center gap-2 px-6 py-3 border border-[#25D366]/40 rounded-full text-[#25D366] hover:bg-[#25D366] hover:text-white transition-all duration-300"
           >
             <MessageCircle size={20} />
             <span className="font-medium">WhatsApp Us</span>
