@@ -50,7 +50,7 @@ export default function Tutorials() {
             </section>
             <section className="tutorial-section">
               <h2 className="font-serif text-2xl md:text-3xl mb-6 text-white">
-                3. How to Deposit & Withdraw Funds
+                3. How to Deposit and Withdraw Funds
               </h2>
               <div className="relative pb-[56.25%] h-0 overflow-hidden rounded-lg border border-accent-color/20 shadow-[0_4px_15px_rgba(0,0,0,0.5)]">
                 <iframe
