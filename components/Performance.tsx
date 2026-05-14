@@ -52,7 +52,7 @@ export default function Performance() {
     }
 
     fetchMetrics();
-    
+
     return () => {
       clearTimeout(timeoutId);
       controller.abort();
@@ -93,7 +93,7 @@ export default function Performance() {
               {metrics.loading ? (
                 <div className="animate-pulse bg-white/10 rounded h-16 w-32 mt-2"></div>
               ) : metrics.error ? (
-                <a 
+                <a
                   href="https://ratings.gtccopy.com/widgets/ratings/5588?widgetKey=social_platform_ratings"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -124,7 +124,7 @@ export default function Performance() {
 
           {/* Sub Metrics */}
           {[
-            { label: "Daily Return", value: metrics.dayReturn, color: "text-green-500" },
+            { label: "Daily Return", value: metrics.dayReturn, color: "text-white-50" },
             { label: "Monthly Return", value: metrics.monthReturn, color: "text-green-500" },
             { label: "Max Drawdown", value: metrics.maxDrawdown, color: "text-red-500" },
           ].map((metric, index) => (
@@ -139,7 +139,7 @@ export default function Performance() {
                 {metrics.loading ? (
                   <div className="animate-pulse bg-white/10 rounded h-10 w-24 mt-1"></div>
                 ) : metrics.error ? (
-                  <a 
+                  <a
                     href="https://ratings.gtccopy.com/widgets/ratings/5588?widgetKey=social_platform_ratings"
                     target="_blank"
                     rel="noopener noreferrer"
