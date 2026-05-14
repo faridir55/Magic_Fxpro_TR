@@ -24,8 +24,9 @@ export default function Navbar() {
   ];
 
   return (
-    <nav
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled
+    <>
+      <nav
+        className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled
         ? "bg-bg-color/90 backdrop-blur-md border-b border-glass-border py-4"
         : "bg-transparent py-6"
         }`}
@@ -67,30 +68,32 @@ export default function Navbar() {
           {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
 
-        {/* Mobile Nav */}
-        <div
-          className={`fixed inset-0 bg-bg-color flex flex-col items-center justify-center space-y-8 transition-transform duration-500 ease-in-out z-40 ${isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
-            }`}
-        >
-          {navLinks.map((link) => (
-            <Link
-              key={link.name}
-              href={link.href}
-              onClick={() => setIsMobileMenuOpen(false)}
-              className="text-xl font-medium uppercase tracking-widest text-text-color hover:text-accent-color transition-colors"
-            >
-              {link.name}
-            </Link>
-          ))}
-          <Link
-            href="/#register"
-            onClick={() => setIsMobileMenuOpen(false)}
-            className="border border-accent-color text-accent-color px-8 py-3 uppercase tracking-widest text-lg hover:bg-accent-color hover:text-bg-color transition-colors mt-4"
-          >
-            Start Copying
-          </Link>
         </div>
+      </nav>
+
+      {/* Mobile Nav */}
+      <div
+        className={`fixed inset-0 bg-bg-color flex flex-col items-center justify-center space-y-8 transition-transform duration-500 ease-in-out z-40 ${isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
+          }`}
+      >
+        {navLinks.map((link) => (
+          <Link
+            key={link.name}
+            href={link.href}
+            onClick={() => setIsMobileMenuOpen(false)}
+            className="text-xl font-medium uppercase tracking-widest text-text-color hover:text-accent-color transition-colors"
+          >
+            {link.name}
+          </Link>
+        ))}
+        <Link
+          href="/#register"
+          onClick={() => setIsMobileMenuOpen(false)}
+          className="border border-accent-color text-accent-color px-8 py-3 uppercase tracking-widest text-lg hover:bg-accent-color hover:text-bg-color transition-colors mt-4"
+        >
+          Start Copying
+        </Link>
       </div>
-    </nav>
+    </>
   );
 }
