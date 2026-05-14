@@ -29,7 +29,7 @@ export default function HowItWorks() {
   ];
 
   return (
-    <section id="how-it-works" className="py-32 px-4 max-w-7xl mx-auto">
+    <section id="how-it-works" className="py-16 px-4 max-w-7xl mx-auto">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}

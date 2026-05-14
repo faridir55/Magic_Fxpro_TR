@@ -63,7 +63,7 @@ export default function Performance() {
   const progressWidth = Math.min(totalReturnFloat, 100);
 
   return (
-    <section id="performance" className="py-32 px-4 max-w-5xl mx-auto">
+    <section id="performance" className="py-16 px-4 max-w-5xl mx-auto">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
