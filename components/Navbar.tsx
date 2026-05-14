@@ -32,11 +32,11 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8 flex justify-between items-center">
         {/* Logo */}
-        <Link href="/" className="z-50 flex items-center">
+        <Link href="/" className="relative z-50 flex items-center">
           <img
             src="/MagicFX_pro.png"
             alt="MagicFX Pro Logo"
-            className="h-20 w-auto object-contain"
+            className="h-16 md:h-20 w-auto object-contain"
           />
         </Link>
 
@@ -61,7 +61,7 @@ export default function Navbar() {
 
         {/* Mobile Menu Toggle */}
         <button
-          className="md:hidden text-text-color z-50"
+          className="md:hidden text-text-color relative z-50"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
           {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
