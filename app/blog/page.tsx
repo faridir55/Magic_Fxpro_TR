@@ -15,7 +15,7 @@ type Post = {
 function getBlogPosts(): Post[] {
   const blogDir = path.join(process.cwd(), "app", "blog");
   const entries = fs.readdirSync(blogDir, { withFileTypes: true });
-  
+
   const posts: Post[] = [];
 
   for (const entry of entries) {
@@ -23,12 +23,12 @@ function getBlogPosts(): Post[] {
       const mdxPath = path.join(blogDir, entry.name, "page.mdx");
       if (fs.existsSync(mdxPath)) {
         const fileContent = fs.readFileSync(mdxPath, "utf8");
-        
+
         // Regex to extract the metadata fields
         const titleMatch = fileContent.match(/title:\s*["'](.*?)["']/);
         const dateMatch = fileContent.match(/date:\s*["'](.*?)["']/);
         const excerptMatch = fileContent.match(/excerpt:\s*["'](.*?)["']/);
-        
+
         if (titleMatch && dateMatch && excerptMatch) {
           posts.push({
             id: entry.name,
@@ -50,7 +50,6 @@ export default function Blog() {
 
   return (
     <>
-      <Navbar />
       <main className="flex-grow pt-32 pb-20 px-4 min-h-screen">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-20">
@@ -84,7 +83,6 @@ export default function Blog() {
           </div>
         </div>
       </main>
-      <Footer />
     </>
   );
 }
