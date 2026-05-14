@@ -27,46 +27,40 @@ export default function Navbar() {
     <>
       <nav
         className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled
-        ? "bg-bg-color/90 backdrop-blur-md border-b border-glass-border py-4"
-        : "bg-transparent py-6"
-        }`}
-    >
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 flex justify-between items-center">
-        {/* Logo */}
-        <Link href="/" className="relative z-50 flex items-center">
-          <img
-            src="/MagicFX_pro.png"
-            alt="MagicFX Pro Logo"
-            className="h-16 md:h-20 w-auto object-contain"
-          />
-        </Link>
-
-        {/* Desktop Nav */}
-        <div className="hidden md:flex items-center space-x-8">
-          {navLinks.map((link) => (
-            <Link
-              key={link.name}
-              href={link.href}
-              className="text-sm font-medium uppercase tracking-widest text-text-muted hover:text-accent-color transition-colors"
-            >
-              {link.name}
-            </Link>
-          ))}
-          <Link
-            href="/#register"
-            className="border border-accent-color text-accent-color px-6 py-2 uppercase tracking-widest text-sm hover:bg-accent-color hover:text-bg-color transition-colors"
-          >
-            Start Copying
+          ? "bg-bg-color/90 backdrop-blur-md border-b border-glass-border py-4"
+          : "bg-transparent py-6"
+          }`}
+      >
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 flex justify-between items-center">
+          {/* Logo */}
+          <Link href="/" className="relative z-50 flex items-center">
+            <img
+              src="/MagicFX_pro.png"
+              alt="MagicFX Pro Logo"
+              className="h-16 md:h-20 w-auto object-contain"
+            />
           </Link>
-        </div>
 
-        {/* Mobile Menu Toggle */}
-        <button
-          className="md:hidden text-text-color relative z-50"
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-        >
-          {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
-        </button>
+          {/* Desktop Nav */}
+          <div className="hidden md:flex items-center space-x-8">
+            {navLinks.map((link) => (
+              <Link
+                key={link.name}
+                href={link.href}
+                className="text-sm font-medium uppercase tracking-widest text-text-muted hover:text-accent-color transition-colors"
+              >
+                {link.name}
+              </Link>
+            ))}
+          </div>
+
+          {/* Mobile Menu Toggle */}
+          <button
+            className="md:hidden text-text-color relative z-50"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          >
+            {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+          </button>
 
         </div>
       </nav>
@@ -86,13 +80,6 @@ export default function Navbar() {
             {link.name}
           </Link>
         ))}
-        <Link
-          href="/#register"
-          onClick={() => setIsMobileMenuOpen(false)}
-          className="border border-accent-color text-accent-color px-8 py-3 uppercase tracking-widest text-lg hover:bg-accent-color hover:text-bg-color transition-colors mt-4"
-        >
-          Start Copying
-        </Link>
       </div>
     </>
   );
