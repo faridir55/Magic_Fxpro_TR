@@ -12,10 +12,10 @@ export default function Home() {
       <Navbar />
       <main className="flex-grow">
         <Hero />
-        
+
         {/* Strategy Section Spacer / Hook */}
-        <div id="strategy" className="h-px w-full" />
-        
+        {/*<div id="strategy" className="h-px w-full" />*/}
+
         <HowItWorks />
         <Performance />
         <CoreValues />
