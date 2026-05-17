@@ -50,7 +50,7 @@ function BlogHero() {
       <span className="text-accent-color text-sm uppercase tracking-widest font-medium mb-4 block">
         Market Intelligence
       </span>
-      <h1 className="font-serif text-5xl md:text-6xl text-accent-gradient inline-block pb-6 mb-6 border-b border-accent-color/30">
+      <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl text-accent-gradient inline-block pb-6 mb-6 border-b border-accent-color/30">
         Insights & Analysis
       </h1>
       <p className="text-text-muted text-lg max-w-2xl mx-auto leading-relaxed">
@@ -64,8 +64,9 @@ function FeaturedPostCard({ post }: { post: Post }) {
   return (
     <Link href={`/blog/${post.id}`} className="block mb-24 group relative z-10 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-color focus-visible:ring-offset-8 focus-visible:ring-offset-bg-color rounded-2xl">
       <div className="absolute inset-0 bg-accent-color/5 blur-xl rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
-      <article className="glass-panel p-8 md:p-12 lg:p-16 rounded-2xl border-t-2 border-t-accent-color/40 hover:border-accent-color/60 transition-all duration-700 relative overflow-hidden flex flex-col md:flex-row gap-8 items-center">
-        <div className="flex-grow">
+      <article className="glass-panel p-8 md:p-12 lg:p-16 rounded-2xl hover:border-accent-color/40 transition-all duration-700 relative overflow-hidden flex flex-col md:flex-row gap-8 items-center">
+        <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-accent-color/70 to-transparent"></div>
+        <div className="flex-grow z-10 relative">
           <div className="flex items-center flex-wrap gap-x-3 gap-y-2 text-xs font-medium uppercase tracking-widest text-accent-color mb-6">
             <span>{post.category}</span>
             <span className="w-1 h-1 rounded-full bg-accent-color/50"></span>
@@ -91,7 +92,9 @@ function FeaturedPostCard({ post }: { post: Post }) {
 function BlogCard({ post }: { post: Post }) {
   return (
     <Link href={`/blog/${post.id}`} className="block h-full group z-10 relative focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-color focus-visible:ring-offset-4 focus-visible:ring-offset-bg-color rounded-xl">
-      <article className="glass-panel h-full p-8 rounded-xl hover:-translate-y-2 transition-all duration-500 hover:border-accent-color/50 flex flex-col">
+      <article className="glass-panel h-full p-8 rounded-xl hover:-translate-y-1 transition-all duration-500 hover:border-accent-color/40 hover:bg-white/[0.02] flex flex-col relative overflow-hidden">
+        <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-accent-color/50 to-transparent"></div>
+        <div className="z-10 relative flex flex-col h-full">
         <div className="flex items-center flex-wrap gap-x-3 gap-y-2 text-xs font-medium uppercase tracking-widest text-accent-color mb-4">
           <span>{post.category}</span>
           <span className="w-1 h-1 rounded-full bg-accent-color/50"></span>
@@ -107,6 +110,7 @@ function BlogCard({ post }: { post: Post }) {
         </p>
         <div className="mt-8 text-accent-color text-sm font-medium uppercase tracking-widest flex items-center gap-2 group-hover:gap-4 transition-all duration-300">
           Read Article <span aria-hidden="true">&rarr;</span>
+        </div>
         </div>
       </article>
     </Link>
@@ -124,10 +128,10 @@ export default function Blog() {
   const remainingPosts = posts.slice(1);
 
   return (
-    <main className="flex-grow pt-32 pb-20 px-4 min-h-screen relative overflow-hidden">
+    <main className="flex-grow pt-32 pb-20 px-4 min-h-screen relative overflow-hidden isolate">
       {/* Background Treatments */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-accent-color/5 rounded-full blur-[120px] pointer-events-none -z-10"></div>
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:4rem_4rem] pointer-events-none -z-10 [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-accent-color/5 rounded-full blur-[120px] pointer-events-none z-0"></div>
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:4rem_4rem] pointer-events-none z-0 [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
 
       <div className="max-w-6xl mx-auto">
         <BlogHero />
