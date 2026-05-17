@@ -16,14 +16,14 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://gtcgold.website/"),
+  metadataBase: new URL("https://magicfx.pro/"),
   title: "Magic FX Pro | Elite XAU/USD Copy Trading",
   description: "Elite algorithmic copy trading specializing exclusively in Gold (XAU/USD). The Element of Wealth, Mastered with Magic FX Pro.",
   keywords: "Gold Trading, XAU/USD, Copy Trading, Algorithmic Trading, Magic FX Pro, Forex, Automated Trading",
   openGraph: {
     title: "Magic FX Pro | Elite XAU/USD Copy Trading",
     description: "Elite algorithmic copy trading specializing exclusively in Gold (XAU/USD).",
-    url: "https://gtcgold.website/",
+    url: "https://magicfx.pro/",
     images: [{ url: "/hero-bg.jpg" }],
   },
   twitter: {
