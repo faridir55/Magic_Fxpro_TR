@@ -126,7 +126,7 @@ export default function Performance() {
           {[
             { label: "Daily Return", value: metrics.dayReturn, color: "text-white-50" },
             { label: "Monthly Return", value: metrics.monthReturn, color: "text-green-500" },
-            { label: "Max Drawdown", value: metrics.maxDrawdown, color: "text-red-500" },
+            { label: "Max Drawdown", value: metrics.maxDrawdown, color: "text-white-50" },
           ].map((metric, index) => (
             <div
               key={index}
