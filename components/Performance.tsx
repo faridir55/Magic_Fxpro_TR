@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function Performance() {
   const [metrics, setMetrics] = useState({
@@ -161,9 +162,17 @@ export default function Performance() {
         </div>
 
         <div className="mt-10 flex flex-col sm:flex-row justify-between items-center pt-6 border-t border-white/5 gap-4">
-          <span className="text-xs text-text-muted">
-            Live metrics synced with GTCCopy Platform
-          </span>
+          <div className="flex flex-col items-center sm:items-start gap-1.5">
+            <span className="text-xs text-text-muted">
+              Live metrics synced with GTCCopy Platform
+            </span>
+            <Link
+              href="/blog/metrics"
+              className="text-[11px] text-accent-color hover:text-white transition-colors underline underline-offset-4 font-medium"
+            >
+              Understanding these metrics &rarr;
+            </Link>
+          </div>
           <a
             href="https://ratings.gtccopy.com/widgets/ratings/5588?widgetKey=social_platform_ratings"
             target="_blank"
