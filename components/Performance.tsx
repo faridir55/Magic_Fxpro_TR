@@ -73,7 +73,7 @@ export default function Performance() {
         className="text-center mb-16"
       >
         <h2 className="font-serif text-4xl md:text-5xl text-accent-gradient inline-block pb-4 border-b border-glass-border">
-          Live Performance
+          Canlı Performans
         </h2>
       </motion.div>
 
@@ -88,7 +88,7 @@ export default function Performance() {
           {/* Main Metric */}
           <div className="md:col-span-3 p-10 bg-gradient-to-br from-accent-color/5 to-white/5 border border-accent-color/20 rounded relative overflow-hidden group hover:border-accent-color transition-colors duration-500">
             <h4 className="text-sm uppercase tracking-widest text-text-muted mb-4">
-              Total Return
+              Toplam Getiri
             </h4>
             <div className={`flex items-baseline gap-2 ${metrics.error ? '' : 'text-green-500'}`}>
               {metrics.loading ? (
@@ -100,7 +100,7 @@ export default function Performance() {
                   rel="noopener noreferrer"
                   className="text-lg text-accent-color hover:text-white transition-colors underline underline-offset-4 mt-4"
                 >
-                  View live stats →
+                  Canlı istatistikleri gör &rarr;
                 </a>
               ) : (
                 <>
@@ -125,9 +125,9 @@ export default function Performance() {
 
           {/* Sub Metrics */}
           {[
-            { label: "Daily Return", value: metrics.dayReturn, color: "text-white-50" },
-            { label: "Monthly Return", value: metrics.monthReturn, color: "text-green-500" },
-            { label: "Max Drawdown", value: metrics.maxDrawdown, color: "text-white-50" },
+            { label: "Günlük Getiri", value: metrics.dayReturn, color: "text-white-50" },
+            { label: "Aylık Getiri", value: metrics.monthReturn, color: "text-green-500" },
+            { label: "Maks. Düşüş", value: metrics.maxDrawdown, color: "text-white-50" },
           ].map((metric, index) => (
             <div
               key={index}
@@ -146,7 +146,7 @@ export default function Performance() {
                     rel="noopener noreferrer"
                     className="text-sm text-accent-color hover:text-white transition-colors underline underline-offset-4 mt-2"
                   >
-                    View live stats →
+                    Canlı istatistikleri gör &rarr;
                   </a>
                 ) : (
                   <>
@@ -164,13 +164,13 @@ export default function Performance() {
         <div className="mt-10 flex flex-col sm:flex-row justify-between items-center pt-6 border-t border-white/5 gap-4">
           <div className="flex flex-col items-center sm:items-start gap-1.5">
             <span className="text-xs text-text-muted">
-              Live metrics synced with GTCCopy Platform
+              Canlı metrikler GTCCopy Platformu ile senkronize
             </span>
             <Link
               href="/blog/metrics"
               className="text-[11px] text-accent-color hover:text-white transition-colors underline underline-offset-4 font-medium"
             >
-              Understanding these metrics &rarr;
+              Bu metrikleri anlamak &rarr;
             </Link>
           </div>
           <a
@@ -179,7 +179,7 @@ export default function Performance() {
             rel="noopener noreferrer"
             className="text-xs text-accent-color hover:text-white transition-colors underline underline-offset-4"
           >
-            View Verified Strategy
+            Doğrulanmış Stratejiyi Görüntüle
           </a>
         </div>
       </motion.div>

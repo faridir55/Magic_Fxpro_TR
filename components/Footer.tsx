@@ -8,17 +8,17 @@ export default function Footer() {
         <Link href="/" className="flex justify-center mb-8">
           <img
             src="/MagicFX_pro.png"
-            alt="MagicFX Pro Logo"
+            alt="MagicFX Pro Logosu"
             className="h-24 w-auto object-contain"
           />
         </Link>
 
         <p className="text-xl text-text-muted mb-8 max-w-2xl mx-auto font-serif italic">
-          &quot;The Element of Wealth, Mastered.&quot;
+          &quot;Zenginliğin Elementi, Ustalaşıldı.&quot;
         </p>
 
         <div className="flex flex-col items-center justify-center mb-10">
-          <h4 className="text-sm uppercase tracking-widest text-text-muted mb-4">Contact Us</h4>
+          <h4 className="text-sm uppercase tracking-widest text-text-muted mb-4">Bize Ulaşın</h4>
           <a
             href="https://wa.me/+15019144353"
             target="_blank"
@@ -26,16 +26,16 @@ export default function Footer() {
             className="inline-flex items-center gap-2 px-6 py-3 border border-[#25D366]/40 rounded-full text-[#25D366] hover:bg-[#25D366] hover:text-white transition-all duration-300"
           >
             <MessageCircle size={20} />
-            <span className="font-medium">WhatsApp Us</span>
+            <span className="font-medium">WhatsApp ile Yazın</span>
           </a>
         </div>
 
         <div className="border-t border-white/5 pt-10 mt-10">
           <p className="text-xs text-text-muted/60 leading-relaxed max-w-3xl mx-auto mb-6">
-            <strong className="text-text-muted">RISK DISCLOSURE:</strong> Trading foreign exchange and precious metals on margin carries a high level of risk and may not be suitable for all investors. The high degree of leverage can work against you as well as for you. Past performance is not indicative of future results. Before deciding to invest in foreign exchange or copy trading, you should carefully consider your investment objectives, level of experience, and risk appetite.
+            <strong className="text-text-muted">RİSK AÇIKLAMASI:</strong> Döviz ve kıymetli metal marjlı işlemleri yüksek düzeyde risk taşır ve tüm yatırımcılar için uygun olmayabilir. Yüksek kaldıraç oranı sizin lehinize olabileceği gibi aleyhinize de çalışabilir. Geçmiş performans gelecekteki sonuçların göstergesi değildir. Döviz veya kopya işlem yatırımı yapmaya karar vermeden önce, yatırım hedeflerinizi, deneyim seviyenizi ve risk iştahınızı dikkatlice değerlendirmelisiniz.
           </p>
           <p className="text-xs text-text-muted/40">
-            &copy; {new Date().getFullYear()} Magic FX Pro. All rights reserved.
+            &copy; {new Date().getFullYear()} Magic FX Pro. Tüm hakları saklıdır.
           </p>
         </div>
       </div>

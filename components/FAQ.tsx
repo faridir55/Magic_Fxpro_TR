@@ -9,24 +9,24 @@ export default function FAQ() {
 
   const faqs = [
     {
-      question: "What is the minimum amount to start copying?",
-      answer: "The minimum capital required is $100. This ensures safe lot sizing and proper risk management on your account.",
+      question: "Kopyalamaya başlamak için minimum tutar nedir?",
+      answer: "Gerekli minimum sermaye 100$'dır. Bu, hesabınızda güvenli lot boyutlandırma ve uygun risk yönetimi sağlar.",
     },
     {
-      question: "Do I need any trading experience?",
-      answer: "No experience is needed. Once you subscribe, the algorithm trades automatically on your behalf — you don't need to monitor charts or place any orders manually.",
+      question: "Herhangi bir işlem deneyimine ihtiyacım var mı?",
+      answer: "Deneyim gerekmez. Abone olduğunuzda, algoritma sizin adınıza otomatik olarak işlem yapar — grafikleri izlemenize veya manuel sipariş vermenize gerek yoktur.",
     },
     {
-      question: "Do I need to keep my computer on?",
-      answer: "No. The strategy runs on our servers 24/5. Your computer can be completely off and trades will still execute normally.",
+      question: "Bilgisayarımı açık tutmam gerekiyor mu?",
+      answer: "Hayır. Strateji sunucularımızda 24/5 çalışır. Bilgisayarınız tamamen kapalı olabilir ve işlemler normal şekilde gerçekleştirilmeye devam eder.",
     },
     {
-      question: "Can I withdraw my funds at any time?",
-      answer: "Yes. Your funds are held in your own GTC brokerage account and are never locked. You can withdraw at any time without penalties.",
+      question: "Paramı istediğim zaman çekebilir miyim?",
+      answer: "Evet. Fonlarınız kendi GTC aracı kurum hesabınızda tutulur ve asla kilitlenmez. Ceza olmaksızın istediğiniz zaman çekebilirsiniz.",
     },
     {
-      question: "How does the performance fee work?",
-      answer: "A performance fee is only charged on profits. If the strategy does not generate returns, you pay nothing. Full fee details are available on the strategy profile page.",
+      question: "Performans ücreti nasıl çalışır?",
+      answer: "Performans ücreti yalnızca kârlar üzerinden alınır. Strateji getiri sağlamazsa hiçbir ödeme yapmazsınız. Tam ücret detayları strateji profil sayfasında mevcuttur.",
     },
   ];
 
@@ -40,7 +40,7 @@ export default function FAQ() {
         className="text-center mb-16"
       >
         <h2 className="font-serif text-4xl md:text-5xl text-accent-gradient inline-block pb-4 border-b border-glass-border">
-          Frequently Asked Questions
+          Sıkça Sorulan Sorular
         </h2>
       </motion.div>
 

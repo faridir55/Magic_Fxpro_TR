@@ -1,131 +1,131 @@
-# SOP: Adding a New Blog Post
+# SOP: Yeni Blog Yazısı Ekleme
 
-This Standard Operating Procedure (SOP) outlines the step-by-step process for creating, writing, and publishing a new blog post on the GTC Gold website.
+Bu Standart Operasyon Prosedürü (SOP), Magic FX Pro web sitesinde yeni bir blog yazısı oluşturma, yazma ve yayınlama sürecini adım adım açıklamaktadır.
 
 ---
 
-## 1. Directory Structure and Routing
+## 1. Dizin Yapısı ve Yönlendirme
 
-The website is built with Next.js App Router and utilizes MDX for blog articles. 
+Web sitesi Next.js App Router ile oluşturulmuştur ve blog makaleleri için MDX kullanmaktadır.
 
-Each blog post resides in its own subfolder within the [blog](file:///c:/Users/MASHADSERVICE/Documents/Antigravity/GTCForex_Pro3/app/blog) directory:
+Her blog yazısı, [blog](file:///c:/Users/MASHADSERVICE/Documents/Antigravity/Magic_Fxpro_TR/app/blog) dizini altında kendi alt klasöründe bulunur:
 ```
 app/blog/
-├── [your-post-slug]/
+├── [yazi-slug]/
 │   └── page.mdx
 ```
 
-The name of the folder (`your-post-slug`) determines the URL path of the blog post (e.g., `/blog/your-post-slug`).
-- Use lowercase alphanumeric characters and hyphens for the slug (e.g., `trading-strategy-update`).
-- Avoid spaces or special characters.
+Klasör adı (`yazi-slug`), blog yazısının URL yolunu belirler (ör. `/blog/yazi-slug`).
+- Slug için küçük harf alfanümerik karakterler ve tire kullanın (ör. `islem-stratejisi-guncelleme`).
+- Boşluk veya özel karakter kullanmaktan kaçının.
 
 ---
 
-## 2. Setting Up Frontmatter
+## 2. Frontmatter Ayarlama
 
-The blog listing system dynamically scans the folders in [app/blog](file:///c:/Users/MASHADSERVICE/Documents/Antigravity/GTCForex_Pro3/app/blog) and extracts the metadata at the top of the `page.mdx` file.
+Blog listeleme sistemi, [app/blog](file:///c:/Users/MASHADSERVICE/Documents/Antigravity/Magic_Fxpro_TR/app/blog) klasörlerini dinamik olarak tarar ve `page.mdx` dosyasının üstündeki metadata'yı çıkarır.
 
-Every `page.mdx` must begin with a YAML frontmatter block enclosed between triple hyphens (`---`):
+Her `page.mdx` dosyası, üçlü tireler (`---`) arasına alınmış bir YAML frontmatter bloğu ile başlamalıdır:
 
 ```yaml
 ---
-title: "Your Compelling Blog Title"
-date: "May 20, 2026"
-excerpt: "A brief, 1-2 sentence summary of what the article covers to grab the reader's attention on the index list page."
-category: "Algorithmic Strategy"
-readingTime: "5 min read"
+title: "İlgi Çekici Blog Başlığınız"
+date: "20 Mayıs 2026"
+excerpt: "Makalenin neyi kapsadığını anlatan, okuyucunun dikkatini çekmek için 1-2 cümlelik kısa bir özet."
+category: "Algoritmik Strateji"
+readingTime: "5 dk okuma"
 ---
 ```
 
-### Frontmatter Fields Reference
-| Field | Type | Description |
+### Frontmatter Alanları Referansı
+| Alan | Tür | Açıklama |
 | :--- | :--- | :--- |
-| `title` | `string` | The main headline of the post. Avoid using quotes inside the title unless escaped or wrapped in different outer quotes. |
-| `date` | `string` | The publication date (e.g., `"May 20, 2026"`). Posts are sorted on the index page by this date (newest first). |
-| `excerpt` | `string` | A concise summary that displays on the blog listing and featured post cards. |
-| `category` | `string` | The topic category. Standard categories in this project include: `Algorithmic Strategy`, `Risk Management`, `Broker Infrastructure`, `Market Intelligence`. |
-| `readingTime` | `string` | An estimated reading time (e.g., `"5 min read"` or `"4 min read"`). |
+| `title` | `string` | Yazının ana başlığı. Kaçış karakteri kullanılmadıkça veya farklı dış tırnak işaretleriyle sarılmadıkça, başlık içinde tırnak işareti kullanmaktan kaçının. |
+| `date` | `string` | Yayın tarihi (ör. `"20 Mayıs 2026"`). Yazılar, dizin sayfasında bu tarihe göre sıralanır (en yeniler önce). |
+| `excerpt` | `string` | Blog listesinde ve öne çıkan yazı kartlarında görüntülenen kısa bir özet. |
+| `category` | `string` | Konu kategorisi. Bu projede standart kategoriler: `Algoritmik Strateji`, `Risk Yönetimi`, `Aracı Kurum Altyapısı`, `Piyasa İstihbaratı`. |
+| `readingTime` | `string` | Tahmini okuma süresi (ör. `"5 dk okuma"` veya `"4 dk okuma"`). |
 
 ---
 
-## 3. Creating the MDX File Structure
+## 3. MDX Dosya Yapısının Oluşturulması
 
-Beneath the YAML frontmatter block, you must include the required layout components and formatting. Here is a complete skeleton of a new `page.mdx` file:
+YAML frontmatter bloğunun altında, gerekli düzen bileşenlerini ve biçimlendirmeyi eklemeniz gerekmektedir. İşte yeni bir `page.mdx` dosyasının tam iskeleti:
 
 ```markdown
 ---
-title: "Navigating Volatility: Advanced Risk Systems in Gold Trading"
-date: "May 20, 2026"
-excerpt: "An in-depth review of how automated equity protection controls stabilize copy-trading portfolios during high-impact economic news."
-category: "Risk Management"
-readingTime: "5 min read"
+title: "Volatiliteyi Yönetmek: Altın İşlemlerinde İleri Risk Sistemleri"
+date: "20 Mayıs 2026"
+excerpt: "Otomatik sermaye koruma kontrollerinin, yüksek etkili ekonomik haberlerde kopya işlem portföylerini nasıl stabilize ettiğine dair kapsamlı bir inceleme."
+category: "Risk Yönetimi"
+readingTime: "5 dk okuma"
 ---
 
 <ArticleHeader frontmatter={frontmatter} />
 
-Your introduction paragraph goes here. Keep it engaging, highlighting the core thesis of the article.
+Giriş paragrafınız buraya gelir. Makalenin temel tezini vurgulayarak ilgi çekici tutun.
 
-## First Major Heading
+## İlk Ana Başlık
 
-Write your body text here. You can use standard markdown:
-- **Bold text** for emphasis.
-- *Italics* for nuance.
-- Unordered lists for bullet points.
-- Ordered lists for sequential steps.
+Gövde metninizi buraya yazın. Standart markdown kullanabilirsiniz:
+- **Kalın metin** vurgu için.
+- *İtalik* nüans için.
+- Madde işaretleri için sırasız listeler.
+- Sıralı adımlar için sıralı listeler.
 ```
 
 > [!IMPORTANT]
-> The `<ArticleHeader frontmatter={frontmatter} />` component must be placed immediately after the closing `---` of your frontmatter. This component automatically renders the category, date, reading time, title, and excerpt in the site's premium typographic style.
+> `<ArticleHeader frontmatter={frontmatter} />` bileşeni, frontmatter'ınızın kapanış `---` işaretinden hemen sonra yerleştirilmelidir. Bu bileşen, sitenin premium tipografik stilinde kategori, tarih, okuma süresi, başlık ve özeti otomatik olarak oluşturur.
 
 ---
 
-## 4. Incorporating Custom Design Components
+## 4. Özel Tasarım Bileşenlerini Kullanma
 
-To maintain a premium, state-of-the-art feel, the project has built-in custom interactive layout blocks that you can use directly inside your markdown.
+Premium, son teknoloji bir görünüm sağlamak için projede, doğrudan markdown içinde kullanabileceğiniz yerleşik özel etkileşimli düzen blokları bulunmaktadır.
 
-### A. Key Takeaway (`<KeyTakeaway>`)
-Use this to highlight central concepts, strong summaries, or prominent quotations.
+### A. Anahtar Çıkarım (`<KeyTakeaway>`)
+Merkezi kavramları, güçlü özetleri veya öne çıkan alıntıları vurgulamak için kullanın.
 
-**Syntax:**
+**Sözdizimi:**
 ```markdown
 <KeyTakeaway>
-Automation provides consistency, but mathematical risk control is what ultimately determines survivability in the XAU/USD markets.
+Otomasyon tutarlılık sağlar, ancak XAU/USD piyasalarında hayatta kalmayı nihayetinde belirleyen matematiksel risk kontrolüdür.
 </KeyTakeaway>
 ```
 
-### B. Insight Box (`<InsightBox>`)
-Use this for detailed breakdowns, micro-analyses, technical definitions, or side notes. It creates a sleek, glass-molded panel with a gold-bordered title header.
+### B. Bilgi Kutusu (`<InsightBox>`)
+Detaylı açıklamalar, mikro analizler, teknik tanımlar veya yan notlar için kullanın. Altın kenarlıklı başlık header'ı ile şık, cam görünümlü bir panel oluşturur.
 
-**Syntax:**
+**Sözdizimi:**
 ```markdown
-<InsightBox title="Microsecond Execution Dynamics">
-During gold trading, macroeconomic data releases can move the market by hundreds of pips in seconds. Algorithmic systems process these feeds in milliseconds, dodging execution latency that manual traders struggle with.
+<InsightBox title="Mikrosaniye İşlem Dinamikleri">
+Altın işlemlerinde, makroekonomik veri açıklamaları piyasayı saniyeler içinde yüzlerce pip hareket ettirebilir. Algoritmik sistemler bu verileri milisaniyeler içinde işleyerek, manuel işlemcilerin zorlandığı işlem gecikmesinden kaçınır.
 </InsightBox>
 ```
 
-### C. Risk Note (`<RiskNote>`)
-Trading gold carries inherent risk. Every post should include a formal risk note regarding leverage, market volatility, or copy-trading risk where applicable.
+### C. Risk Notu (`<RiskNote>`)
+Altın işlemleri doğası gereği risk taşır. Her yazıda, kaldıraç, piyasa volatilitesi veya kopya işlem riskine ilişkin uygun olduğunda resmi bir risk notu bulunmalıdır.
 
-**Syntax:**
+**Sözdizimi:**
 ```markdown
 <RiskNote>
-While algorithmic systems employ strict equity protection circuits, adverse market conditions or sudden black-swan events can still negatively impact portfolio balances. Leveraged instruments involve substantial capital risk.
+Algoritmik sistemler sıkı sermaye koruma devreleri kullansa da, olumsuz piyasa koşulları veya ani siyah kuğu olayları portföy bakiyelerini olumsuz etkileyebilir. Kaldıraçlı enstrümanlar önemli sermaye riski içerir.
 </RiskNote>
 ```
 
 ---
 
-## 5. Adding Video Integrations (Optional)
+## 5. Video Entegrasyonları Ekleme (İsteğe Bağlı)
 
-If your blog post mentions external media (e.g., a GTC FX overview video), you can embed it cleanly within a responsive, modern container that preserves the project's glassmorphism style.
+Blog yazınız harici medyadan bahsediyorsa (ör. bir GTC FX tanıtım videosu), projenin glassmorphism stilini koruyan duyarlı, modern bir konteynır içinde temiz bir şekilde gömebilirsiniz.
 
-**Syntax:**
+**Sözdizimi:**
 ```html
 <div className="not-prose my-10 w-full aspect-video rounded-xl overflow-hidden border border-glass-border">
     <iframe 
         className="w-full h-full" 
         src="https://www.youtube.com/embed/VIDEO_ID" 
-        title="Video Description" 
+        title="Video Açıklaması" 
         frameBorder="0" 
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
         allowFullScreen
@@ -135,20 +135,20 @@ If your blog post mentions external media (e.g., a GTC FX overview video), you c
 
 ---
 
-## 6. Verification & Publishing Checklist
+## 6. Doğrulama & Yayınlama Kontrol Listesi
 
-Before deploying your changes, verify the integration locally:
+Değişikliklerinizi yayınlamadan önce, entegrasyonu yerel olarak doğrulayın:
 
-1. **Verify File Location**: Ensure the file is named `page.mdx` and is in the correct subfolder under `app/blog/`.
-2. **Local Run**: Execute the dev server in your workspace:
+1. **Dosya Konumunu Doğrulayın**: Dosyanın `page.mdx` olarak adlandırıldığından ve `app/blog/` altındaki doğru alt klasörde olduğundan emin olun.
+2. **Yerel Çalıştırma**: Çalışma alanınızda geliştirme sunucusunu başlatın:
    ```bash
    npm run dev
    ```
-3. **Inspect the Index Page**: Visit `http://localhost:3000/blog` to verify:
-   - Your post is listed.
-   - It is sorted correctly (if it is the newest, it should automatically display as the large "Featured Post").
-   - The title, excerpt, date, reading time, and category appear correctly.
-4. **Inspect the Article Page**: Click the post and verify:
-   - The URL is `/blog/your-post-slug`.
-   - The `<ArticleHeader>` renders perfectly.
-   - All markdown headings, lists, `<InsightBox>`, `<KeyTakeaway>`, and `<RiskNote>` elements render with correct responsive styling.
+3. **Dizin Sayfasını Kontrol Edin**: Doğrulamak için `http://localhost:3000/blog` adresini ziyaret edin:
+   - Yazınız listelenmiş olmalı.
+   - Doğru şekilde sıralanmış olmalı (en yeniyse, otomatik olarak büyük "Öne Çıkan Yazı" olarak görüntülenmelidir).
+   - Başlık, özet, tarih, okuma süresi ve kategori doğru şekilde görünmelidir.
+4. **Makale Sayfasını Kontrol Edin**: Yazıya tıklayın ve doğrulayın:
+   - URL `/blog/yazi-slug` şeklindedir.
+   - `<ArticleHeader>` mükemmel şekilde oluşturulur.
+   - Tüm markdown başlıkları, listeler, `<InsightBox>`, `<KeyTakeaway>` ve `<RiskNote>` öğeleri doğru duyarlı stille oluşturulur.

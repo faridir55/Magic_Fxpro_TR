@@ -7,18 +7,18 @@ export default function CoreValues() {
   const values = [
     {
       icon: <Cpu size={40} className="text-accent-color mb-6" />,
-      title: "Algorithmic Precision",
-      description: "Data-driven execution with zero emotional interference, capturing optimal XAU/USD movements.",
+      title: "Algoritmik Hassasiyet",
+      description: "Sıfır duygusal müdahale ile veriye dayalı işlem yürütme, optimum XAU/USD hareketlerini yakalama.",
     },
     {
       icon: <Shield size={40} className="text-accent-color mb-6" />,
-      title: "Risk Management",
-      description: "Strict drawdown limits and dynamic lot sizing to protect your capital in volatile markets.",
+      title: "Risk Yönetimi",
+      description: "Oynak piyasalarda sermayenizi korumak için sıkı düşüş limitleri ve dinamik lot boyutlandırma.",
     },
     {
       icon: <TrendingUp size={40} className="text-accent-color mb-6" />,
-      title: "Consistent Growth",
-      description: "Engineered for steady, compounding returns over the long term, avoiding high-risk gambles.",
+      title: "Sürekli Büyüme",
+      description: "Yüksek riskli kumarlardan kaçınarak uzun vadede istikrarlı, bileşik getiriler için tasarlandı.",
     },
   ];
 

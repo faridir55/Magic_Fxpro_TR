@@ -6,25 +6,25 @@ export default function HowItWorks() {
   const steps = [
     {
       number: "01",
-      title: "Create Broker Account",
-      description: "Register with our exclusive partner broker to ensure seamless trade execution and low latency.",
+      title: "Aracı Kurum Hesabı Oluşturun",
+      description: "Sorunsuz işlem yürütme ve düşük gecikme süresi için özel ortak aracı kurumumuza kaydolun.",
       link: "https://mygtcportal.com/getview?view=register&token=Ai9beowwqowwwwww",
-      linkText: "Register"
+      linkText: "Kayıt Ol"
     },
     {
       number: "02",
-      title: "Fund Wallet",
-      description: "Minimum required capital is $100 to maintain adequate margin for our risk management",
+      title: "Cüzdanınızı Doldurun",
+      description: "Risk yönetimimiz için yeterli marjı korumak adına minimum gerekli sermaye 100$'dır.",
       link: "https://mygtcfx.com/getview?view=fund/deposit",
-      linkText: "Fund"
+      linkText: "Fon Yatır"
     },
 
     {
       number: "03",
-      title: "Connect to Master Account",
-      description: "Link your account to our master algorithm via the copy portal and mirror trades automatically.",
+      title: "Ana Hesaba Bağlanın",
+      description: "Hesabınızı kopya portalı aracılığıyla ana algoritmamıza bağlayın ve işlemleri otomatik olarak yansıtın.",
       link: "https://gtccopy.com/portal/registration/subscription/86494/magicfx",
-      linkText: "Connect"
+      linkText: "Bağlan"
     },
   ];
 
@@ -38,7 +38,7 @@ export default function HowItWorks() {
         className="text-center mb-20"
       >
         <h2 className="font-serif text-4xl md:text-5xl text-accent-gradient inline-block pb-4 border-b border-glass-border">
-          How It Works
+          Nasıl Çalışır
         </h2>
       </motion.div>
 

@@ -32,8 +32,8 @@ function getBlogPosts(): Post[] {
             title: data.title,
             date: data.date,
             excerpt: data.excerpt || "",
-            category: data.category || "Market Intelligence",
-            readingTime: data.readingTime || "Brief read",
+            category: data.category || "Piyasa İstihbaratı",
+            readingTime: data.readingTime || "Kısa okuma",
           });
         }
       }
@@ -48,13 +48,13 @@ function BlogHero() {
   return (
     <div className="text-center mb-20 relative z-10">
       <span className="text-accent-color text-sm uppercase tracking-widest font-medium mb-4 block">
-        Market Intelligence
+        Piyasa İstihbaratı
       </span>
       <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl text-accent-gradient inline-block pb-6 mb-6 border-b border-accent-color/30">
-        Insights & Analysis
+        Analizler & Değerlendirmeler
       </h1>
       <p className="text-text-muted text-lg max-w-2xl mx-auto leading-relaxed">
-        Structured commentary on XAU/USD markets, algorithmic execution, risk management, and copy trading strategy.
+        XAU/USD piyasaları, algoritmik işlem yürütme, risk yönetimi ve kopya işlem stratejisi üzerine yapılandırılmış yorumlar.
       </p>
     </div>
   );
@@ -81,7 +81,7 @@ function FeaturedPostCard({ post }: { post: Post }) {
             {post.excerpt}
           </p>
           <div className="text-accent-color text-sm font-medium uppercase tracking-widest flex items-center gap-2 group-hover:gap-4 transition-all duration-300">
-            Read analysis <span aria-hidden="true">&rarr;</span>
+            Analizi oku <span aria-hidden="true">&rarr;</span>
           </div>
         </div>
       </article>
@@ -109,7 +109,7 @@ function BlogCard({ post }: { post: Post }) {
           {post.excerpt}
         </p>
         <div className="mt-8 text-accent-color text-sm font-medium uppercase tracking-widest flex items-center gap-2 group-hover:gap-4 transition-all duration-300">
-          Read Article <span aria-hidden="true">&rarr;</span>
+          Makaleyi Oku <span aria-hidden="true">&rarr;</span>
         </div>
         </div>
       </article>
@@ -121,7 +121,7 @@ export default function Blog() {
   const posts = getBlogPosts();
 
   if (posts.length === 0) {
-    return <main className="flex-grow pt-32 pb-20 px-4 min-h-screen text-center">No posts found.</main>;
+    return <main className="flex-grow pt-32 pb-20 px-4 min-h-screen text-center">Yazı bulunamadı.</main>;
   }
 
   const featuredPost = posts[0];
@@ -142,10 +142,10 @@ export default function Blog() {
           <section className="mt-20">
             <div className="mb-12">
               <span className="text-accent-color text-xs uppercase tracking-widest font-medium mb-2 block">
-                Latest Notes
+                Son Notlar
               </span>
               <h2 className="font-serif text-3xl md:text-4xl text-text-color">
-                Research & Commentary
+                Araştırma & Yorum
               </h2>
             </div>
             

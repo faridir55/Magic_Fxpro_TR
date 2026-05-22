@@ -5,31 +5,31 @@ import ScrollToHash from "@/components/ScrollToHash";
 import { Analytics } from "@vercel/analytics/react";
 const montserrat = Montserrat({
   variable: "--font-montserrat",
-  subsets: ["latin"],
+  subsets: ["latin", "latin-ext"],
   weight: ["300", "400", "500", "600"],
 });
 
 const playfair = Playfair_Display({
   variable: "--font-playfair",
-  subsets: ["latin"],
+  subsets: ["latin", "latin-ext"],
   weight: ["400", "600", "700"],
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://magicfx.pro/"),
-  title: "Magic FX Pro | Elite XAU/USD Copy Trading",
-  description: "Elite algorithmic copy trading specializing exclusively in Gold (XAU/USD). The Element of Wealth, Mastered with Magic FX Pro.",
-  keywords: "Gold Trading, XAU/USD, Copy Trading, Algorithmic Trading, Magic FX Pro, Forex, Automated Trading",
+  metadataBase: new URL("https://tr.magicfx.pro/"),
+  title: "Magic FX Pro | Elit XAU/USD Kopya İşlem",
+  description: "Altın (XAU/USD) üzerine münhasıran uzmanlaşmış elit algoritmik kopya işlem. Zenginliğin Elementi, Magic FX Pro ile Ustalaşıldı.",
+  keywords: "Altın İşlem, XAU/USD, Kopya İşlem, Algoritmik İşlem, Magic FX Pro, Forex, Otomatik İşlem",
   openGraph: {
-    title: "Magic FX Pro | Elite XAU/USD Copy Trading",
-    description: "Elite algorithmic copy trading specializing exclusively in Gold (XAU/USD).",
-    url: "https://magicfx.pro/",
+    title: "Magic FX Pro | Elit XAU/USD Kopya İşlem",
+    description: "Altın (XAU/USD) üzerine münhasıran uzmanlaşmış elit algoritmik kopya işlem.",
+    url: "https://tr.magicfx.pro/",
     images: [{ url: "/hero-bg.jpg" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Magic FX Pro | Elite XAU/USD Copy Trading",
-    description: "Elite algorithmic copy trading specializing exclusively in Gold (XAU/USD).",
+    title: "Magic FX Pro | Elit XAU/USD Kopya İşlem",
+    description: "Altın (XAU/USD) üzerine münhasıran uzmanlaşmış elit algoritmik kopya işlem.",
     images: ["/hero-bg.jpg"],
   },
 };
@@ -41,7 +41,7 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
+      lang="tr"
       className={`${montserrat.variable} ${playfair.variable} h-full antialiased scroll-smooth scroll-pt-32`}
     >
       <body className="min-h-full flex flex-col bg-bg-color text-text-color font-sans overflow-x-hidden selection:bg-accent-color selection:text-bg-color">

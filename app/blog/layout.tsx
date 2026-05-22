@@ -25,7 +25,7 @@ export default function MdxLayout({ children }: { children: React.ReactNode }) {
                 href="/blog" 
                 className="inline-flex items-center text-xs font-medium uppercase tracking-widest text-text-muted hover:text-accent-color transition-colors duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-color focus-visible:ring-offset-4 focus-visible:ring-offset-bg-color rounded"
               >
-                <span aria-hidden="true" className="mr-2">&larr;</span> Back to Insights
+                <span aria-hidden="true" className="mr-2">&larr;</span> Analizlere Dön
               </Link>
             </div>
             

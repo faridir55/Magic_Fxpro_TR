@@ -17,9 +17,9 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { name: "How it works", href: "/#how-it-works" },
-    { name: "Performance", href: "/#performance" },
-    { name: "Tutorials", href: "/tutorials" },
+    { name: "Nasıl Çalışır", href: "/#how-it-works" },
+    { name: "Performans", href: "/#performance" },
+    { name: "Eğitimler", href: "/tutorials" },
     { name: "Blog", href: "/blog" },
   ];
 
@@ -36,7 +36,7 @@ export default function Navbar() {
           <Link href="/" className="relative z-50 flex items-center">
             <img
               src="/MagicFX_pro.png"
-              alt="MagicFX Pro Logo"
+              alt="MagicFX Pro Logosu"
               className="h-16 md:h-20 w-auto object-contain"
             />
           </Link>
